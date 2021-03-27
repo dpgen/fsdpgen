@@ -67,7 +67,7 @@ $(function () {
   $("form").submit(function (e) {
     e.preventDefault();
     var username = $("#fullname").val();
-    var testimony = $("#testimony").val();
+    var testimony = ""; /* $("#testimony").val();*/
     // Move cropped image data to hidden input
     var imageData = $(".image-editor").cropit("export", {
       type: "image/jpeg",
@@ -81,7 +81,7 @@ $(function () {
     // x, y, width, height
     const picData = [315, 174, 459, 513];
     // name, y, x
-    const nameData = [`- ${username}`, 868, 331, testimony];
+    const nameData = [`- ${username}`, 425, 432, testimony];
     // const nameData = [username + ",", 1295, 685, ministryName];
 
     createDP(username, imageData, picData, nameData, function (url) {
@@ -96,7 +96,7 @@ $(function () {
             <div class="img-dp">
               <img id="dp_result" src=${url} title="Your DP"/>
               <br>
-              <a class="download-dp" href="${url}" download="SS_DP_${username.replace(/\./g, "")}">Download Image</a>
+              <a class="download-dp" href="${url}" download="FS_DP_${username.replace(/\./g, "")}">Download Image</a>
               <br>
             </div>
             
@@ -211,7 +211,7 @@ $(function () {
       };
 
     var userImg = loadImage(imageUrl);
-    var frameImg = loadImage("./src/img/firstFrame.jpg");
+    var frameImg = loadImage("./src/img/firstFrame.png");
 
     function loadImage(src) {
       var img = new Image();
@@ -230,23 +230,36 @@ $(function () {
 
       ctx.drawImage(frameImg, 0, 0);
 
-      ctx.drawImage(userImg, view.x, view.y, view.width, view.height);
+      // ctx.drawImage(userImg, view.x, view.y, view.width, view.height);
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(280.2, 337, 118, 0, Math.PI * 2, true);
+      ctx.closePath();
+      ctx.clip();
+
+      ctx.drawImage(userImg, 162.1, 219.3, 236.2, 235.4);
+
+      // ctx.beginPath();
+      // ctx.arc(0, 0, 100, 0, Math.PI * 2, true);
+      // ctx.clip();
+      // ctx.closePath();
+      ctx.restore();
 
       ctx = canvas.getContext("2d");
 
       //Write user name
       ctx.textBaseline = "top";
-      ctx.textAlign = "center";
-      ctx.font = "63px Autography";
-      ctx.fillStyle = "#fd6003";
+      ctx.textAlign = "left";
+      ctx.font = "50.5px Autography";
+      ctx.fillStyle = "#1f1d1d";
       var canvasText = name[0];
-      ctx.fillText(canvasText, name[2] + 209, name[1]);
+      ctx.fillText(canvasText, name[2], name[1]);
       // ctx.renderText(name[3], name[2], name[1], 1);
 
       //Write testimony
-      ctx.font = "38px Poppins-SemiBold";
-      ctx.fillStyle = "#060c12";
-      wrapText(ctx, name[3], 540, 709, 30, 50, 0);
+      // ctx.font = "38px Poppins-SemiBold";
+      // ctx.fillStyle = "#060c12";
+      // wrapText(ctx, name[3], 540, 709, 30, 50, 0);
 
       cb(canvas.toDataURL("image/jpeg", 1.0));
     }

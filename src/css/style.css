@@ -9,8 +9,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-size: 100%;
-  color: #000;
-  color: rgb(0, 0, 0);
+  color: #b3850c;
+  /* color: rgb(0, 0, 0); */
   font-family: "FuturaBTMedium", sans-serif;
 }
 
@@ -123,7 +123,7 @@ main {
   line-height: 1.02;
   letter-spacing: -0.55px;
   text-align: left;
-  color: #020235;
+  color: #b3850c;
   margin-top: 5%;
   margin-bottom: 2%;
 }
@@ -236,8 +236,8 @@ form {
 
 fieldset {
   margin-top: 20%;
-  background: #0202358c;
-  border: 3px outset #020235;
+  background: #b3850c8c;
+  border: 3px outset #b3850c;
 }
 
 legend {
@@ -249,7 +249,7 @@ legend {
   height: 10px;
   width: 10px;
   margin: 5px;
-  background-color: #51156c;
+  background-color: #e1cf9f;
   border-radius: 50%;
   display: inline-block;
 }
@@ -298,7 +298,7 @@ legend {
   transition: background 0.2s linear 0s;
 }
 .form-control2:hover {
-  border-color: #020235;
+  border-color: #b3850c;
   outline: none;
 }
 .input-field_helper {
@@ -316,7 +316,7 @@ legend {
   left: 60px;
 }
 input[type="text"]:focus + .input-field_helper {
-  color: #020235;
+  color: #b3850c;
   opacity: 1 !important;
 }
 input::-webkit-input-placeholder {
@@ -330,7 +330,7 @@ input:focus::placeholder {
   color: transparent;
 }
 input[type="text"]:focus {
-  border-color: #020235;
+  border-color: #b3850c;
   outline: none;
   background-color: transparent;
   -webkit-transition: border 0.3s ease-in;
@@ -363,7 +363,7 @@ input[type="text"]:focus {
 
 button[value="submit"] {
   box-shadow: 0px 6px 6.5px 0.5px rgba(0, 0, 0, 0.23);
-  background-color: #020235;
+  background-color: #b3850c;
   display: block;
   font-weight: 700;
   width: 60%;
@@ -405,7 +405,7 @@ button[type="submit"]:hover {
   width: 50%;
   margin-left: 20%;
   color: rgb(255, 255, 255);
-  background-color: #020235;
+  background-color: #b3850c;
   border-color: rgb(29, 129, 209);
   font-family: Poppins-SemiBold;
 }
@@ -441,7 +441,7 @@ img#dp_result {
   max-width: 100%;
   width: 100%;
   height: 100%;
-  border: solid 3px #020235;
+  border: solid 3px #b3850c;
   margin: 25px auto;
 }
 
@@ -452,7 +452,7 @@ img#dp_result {
   text-decoration: none;
   font-weight: 700;
   font-size: 30px;
-  color: #020235;
+  color: #b3850c;
 }
 
 /* download btn */
@@ -475,7 +475,7 @@ img#dp_result {
   border: none;
   outline: none;
   box-shadow: 0px 6px 6.5px 0.5px rgba(0, 0, 0, 0.23);
-  background-color: #020235;
+  background-color: #b3850c;
   color: #fff;
 }
 .share {
@@ -508,7 +508,7 @@ img#dp_result {
 }
 .social-media-handles > div > a:hover {
   text-decoration: none;
-  color: #020235;
+  color: #b3850c;
 }
 
 /* footer */
@@ -528,7 +528,7 @@ footer .social {
 }
 .under-title {
   font-size: 45px;
-  color: #020235;
+  color: #b3850c;
   font-family: FuturaBTBold;
 }
 .sub-title {
@@ -540,7 +540,7 @@ footer .social {
   border: dashed 1px;
   border-radius: 3px;
   margin-top: 7px;
-  width: 224px;
+  width: 250px;
   margin-left: 20%;
   height: 250px;
 }
@@ -620,7 +620,7 @@ button[type="submit"] {
   }
   .under-title {
     font-size: 40px;
-    color: #020235;
+    color: #b3850c;
   }
   .form-control2 {
     width: 100%;
@@ -654,7 +654,7 @@ button[type="submit"] {
   }
   .cropit-preview {
     width: 260px;
-    height: 291px;
+    height: 260px;
     margin-left: 5%;
   }
   .arrow-back {
@@ -681,7 +681,7 @@ button[type="submit"] {
   }
   .cropit-preview {
     width: 225px;
-    height: 252px;
+    height: 225px;
     margin-left: 5%;
   }
   .under p {
